@@ -1,0 +1,25 @@
+<svg xmlns="http://w3.org" viewBox="20 10 60 75" class="h-10 w-10 flex-shrink-0 fill-current sm:h-12 sm:w-12">
+
+        <!-- Triángulo superior izquierdo (Cian brillante) -->
+
+        <polygon points="20,25 50,10 50,45" class="text-[#32E6E2]" />
+
+
+
+        <!-- Triángulo superior derecho / Curva de la P (Cian medio) -->
+
+        <polygon points="50,10 80,25 50,45" class="text-[#24C1E0]" />
+
+
+
+        <!-- Triángulo central / Cuerpo de la P (Azul turquesa oscuro) -->
+
+        <polygon points="20,25 50,45 50,65" class="text-[#158ca7]" />
+
+
+
+        <!-- Triángulo inferior / Pata de la P (Azul marino profundo) -->
+
+        <polygon points="20,25 20,85 50,65" class="text-[#0E5A70]" />
+
+      </svg>
