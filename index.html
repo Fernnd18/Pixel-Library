@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Pixel Library</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div
+        class="flex items-center justify-between bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-700 p-4">
+        <h1
+          class="flex items-center bg-gradient-to-r from-cyan-400 to-sky-600 bg-clip-text text-xl font-extrabold text-transparent sm:text-2xl gap-1">
+          <svg
+            xmlns="http://w3.org"
+            viewBox="20 10 60 75"
+            class="h-10 w-10 flex-shrink-0 fill-current sm:h-12 sm:w-12">
+            <!-- Triángulo superior izquierdo (Cian brillante) -->
+
+            <polygon points="20,25 50,10 50,45" class="text-[#32E6E2]" />
+
+            <!-- Triángulo superior derecho / Curva de la P (Cian medio) -->
+
+            <polygon points="50,10 80,25 50,45" class="text-[#24C1E0]" />
+
+            <!-- Triángulo central / Cuerpo de la P (Azul turquesa oscuro) -->
+
+            <polygon points="20,25 50,45 50,65" class="text-[#158ca7]" />
+
+            <!-- Triángulo inferior / Pata de la P (Azul marino profundo) -->
+
+            <polygon points="20,25 20,85 50,65" class="text-[#0E5A70]" />
+          </svg>
+
+          <span>Pixel Library</span>
+
+          <!-- Brand name -->
+        </h1>
+
+        <!-- Botones // Buttons -->
+        <button
+          class="cursor-pointer rounded-lg border border-zinc-600 px-2.5 py-1 font-bold text-white hover:bg-zinc-800 sm:px-4 sm:py-1.5 transition-colors">
+          Login
+        </button>
+      </div>
+    </header>
+  </body>
+</html>
