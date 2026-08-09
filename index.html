@@ -7,53 +7,175 @@
     <title>Pixel Library</title>
   </head>
   <body>
-<!-- Header -->
 
-<header>
-  <nav class="flex items-center justify-between bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-700 px-6 py-4">
-    <a href="#" class="flex items-center gap-1 bg-gradient-to-r from-cyan-400 to-sky-600 bg-clip-text text-xl font-extrabold text-transparent sm:text-2xl">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="20 10 60 75" class="h-10 w-10 flex-shrink-0 fill-current sm:h-12 sm:w-12">
-        <!-- Triángulo superior izquierdo (Cian brillante) -->
+<div class="flex min-h-screen flex-col"> <!--div contenedor de la pagina min-h-screen ayuda a medir toda la pagina para ajustarel diseño y flex-col ajusta la estrcutura del contenedor principal-->
 
-        <polygon points="20,25 50,10 50,45" class="text-[#32E6E2]" />
+<!-- =================================== Header ================================================ -->
+  <header class="sticky top-0 z-50">
+    <nav class="flex items-center justify-between bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-700 px-6 py-4">
+      <a href="#" class="flex items-center gap-1 bg-gradient-to-r from-cyan-400 to-sky-600 bg-clip-text text-xl font-extrabold text-transparent sm:text-2xl">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="20 10 60 75" class="h-10 w-10 flex-shrink-0 fill-current sm:h-12 sm:w-12">
+          <!-- Triángulo superior izquierdo (Cian brillante) -->
 
-        <!-- Triángulo superior derecho / Curva de la P (Cian medio) -->
+          <polygon points="20,25 50,10 50,45" class="fill-[#32E6E2]" />
 
-        <polygon points="50,10 80,25 50,45" class="text-[#24C1E0]" />
+          <!-- Triángulo superior derecho / Curva de la P (Cian medio) -->
 
-        <!-- Triángulo central / Cuerpo de la P (Azul turquesa oscuro) -->
+          <polygon points="50,10 80,25 50,45" class="fill-[#24C1E0]" />
 
-        <polygon points="20,25 50,45 50,65" class="text-[#158ca7]" />
+          <!-- Triángulo central / Cuerpo de la P (Azul turquesa oscuro) -->
 
-        <!-- Triángulo inferior / Pata de la P (Azul marino profundo) -->
+          <polygon points="20,25 50,45 50,65" class="fill-[#158ca7]" />
 
-        <polygon points="20,25 20,85 50,65" class="text-[#0E5A70]" />
-      </svg>
+          <!-- Triángulo inferior / Pata de la P (Azul marino profundo) -->
 
-      <!-- Brand name -->
-
-      <span class=""> Pixel Library</span>
-    </a>
-
-    <!-- Botones // Buttons ( hidden due to is mobile first hide the button sm:block enable the button when viewport is ≥640px )-->
-
-    <div class="flex items-center">
-      <a href="#" class="hidden rounded-lg border border-zinc-600 px-2.5 py-1 font-bold text-white transition-colors hover:bg-zinc-800 sm:block sm:px-4 sm:py-1.5">Login</a>
-
-      <a href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 stroke-gray-400 stroke-3 sm:hidden">
-          <!-- Cabeza -->
-
-          <circle cx="12" cy="7" r="4" />
-
-          <!-- Hombros / Cuerpo -->
-
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <polygon points="20,25 20,85 50,65" class="fill-[#0E5A70]" />
         </svg>
-      </a>
-    </div>
-  </nav>
-</header>
 
+        <!-- Brand name -->
+
+        <span class=""> Pixel Library</span>
+      </a>
+
+      <!-- Botones // Buttons ( hidden due to is mobile first hide the button sm:block enable the button when viewport is ≥640px )-->
+
+      <div class="flex items-center"> <!-- Contenedor de los botones -->
+        <a href="#" class="hidden rounded-lg border border-zinc-600 px-2.5 py-1 font-bold text-white transition-colors hover:bg-zinc-800 sm:block sm:px-4 sm:py-1.5">Login</a> <!-- Botón de inicio de sesión, oculto en pantallas pequeñas y visible en pantallas medianas y grandes -->
+
+        <a href="#"> <!-- Botón de usuario, visible en pantallas pequeñas y oculto en pantallas medianas y grandes -->
+          <span class="sr-only">User</span> <!-- Texto accesible para lectores de pantalla, oculto visualmente -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 stroke-gray-400 stroke-3 sm:hidden"> <!-- Icono de usuario, visible en pantallas pequeñas y oculto en pantallas medianas y grandes -->
+            <!-- Cabeza -->
+
+            <circle cx="12" cy="7" r="4" />
+
+            <!-- Hombros / Cuerpo -->
+
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          </svg>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+<!-- =================================== Header ================================================ -->
+
+<!-- =================================== Contenido Principal =================================== -->
+
+  <main class="flex-grow"> <!-- Contenedor principal que ocupa el espacio restante de la pantalla -->
+    <div>
+      <!-- Agregamos w-fit para ajustar el ancho y mx-auto para centrarlo -->
+
+      <nav class="mx-auto flex w-fit justify-center gap-3.5 border-b border-zinc-700 px-2 py-2">
+        <a href="#" class="transition-colors hover:text-white">SVG</a>
+
+        <a href="#" class="transition-colors hover:text-white">Headers</a>
+
+        <a href="#" class="transition-colors hover:text-white">Footers</a>
+      </nav>
+    </div>
+  </main>
+
+<!-- =================================== Contenido Principal =================================== -->
+
+<!-- =================================== Footer ================================================ -->
+
+  <footer class="bg-zinc-900 px-10 py-10 text-zinc-400">
+
+    
+
+    <div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-3">
+      <!-- Columna 1: Redes Sociales -->
+
+      <div>
+        <h3 class="font-bold text-white">Redes Sociales</h3>
+
+        <nav class="mt-3 flex flex-row gap-3">
+          <!-- Facebook -->
+
+          <a href="#" class="transition-colors hover:text-blue-500">
+            <span class="sr-only">Facebook</span>
+
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+
+          <a href="#" class="transition-colors hover:text-pink-500">
+            <span class="sr-only">Instagram</span>
+
+            <svg class="h-6 w-6 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+
+          <!-- GitHub -->
+
+          <a href="#" class="transition-colors hover:text-white">
+            <span class="sr-only">GitHub</span>
+
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Columna 2: Contactos -->
+
+      <div>
+        <h3 class="font-bold text-white">Contactos</h3>
+
+        <nav class="mt-3 flex flex-row gap-4">
+          <!-- WhatsApp -->
+
+          <a href="#" class="transition-colors hover:text-green-500">
+            <span class="sr-only">WhatsApp</span>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6" aria-label="WhatsApp">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.67-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+
+              <path d="M12.004 2.003a9.95 9.95 0 0 0-8.471 15.354L2 22l4.786-1.51A9.95 9.95 0 1 0 12.004 2.003zm0 18.2a8.24 8.24 0 0 1-4.2-1.15l-.3-.178-2.84.896.925-2.768-.196-.31a8.24 8.24 0 1 1 6.611 3.51z" />
+            </svg>
+          </a>
+
+          <!-- Correo -->
+
+          <a href="mailto:info@correo.com" class="transition-colors hover:text-amber-500">
+            <span class="sr-only">Correo electrónico</span>
+
+            <svg class="h-6 w-6 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Columna 3: Sobre la Empresa / Enlaces rápidos (Nueva para equilibrar el Grid) -->
+
+      <div>
+        <h3 class="font-bold text-white">Sobre Pixel Library</h3>
+
+        <p class="mt-3 text-sm leading-relaxed">Pixel Library es una pequeña biblioteca de componentes que te ayudaran a diseñar tu pagina web con facilidad.</p>
+      </div>
+    </div>
+
+    <!-- =================================== Copyright =================================== -->
+
+    <div class="mt-10 border-t border-zinc-700 pt-4 text-center text-xs">
+      <p><small>&copy; 2026 Pixel Library. Todos los derechos reservados.</small></p>
+    </div>
+  </footer>
+
+<!-- =================================== Footer ================================================ -->
+</div>
   </body>
 </html>
