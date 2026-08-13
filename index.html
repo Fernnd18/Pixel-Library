@@ -8,9 +8,11 @@
   </head>
   <body>
 
-<div class="flex min-h-screen flex-col"> <!--div contenedor de la pagina min-h-screen ayuda a medir toda la pagina para ajustarel diseño y flex-col ajusta la estrcutura del contenedor principal-->
+<div class="flex min-h-screen flex-col">
+  <!--div contenedor de la pagina min-h-screen ayuda a medir toda la pagina para ajustarel diseño y flex-col ajusta la estrcutura del contenedor principal-->
 
-<!-- =================================== Header ================================================ -->
+  <!-- =================================== Header ================================================ -->
+
   <header class="sticky top-0 z-50">
     <nav class="flex items-center justify-between bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-700 px-6 py-4">
       <a href="#" class="flex items-center gap-1 bg-gradient-to-r from-cyan-400 to-sky-600 bg-clip-text text-xl font-extrabold text-transparent sm:text-2xl">
@@ -39,12 +41,23 @@
 
       <!-- Botones // Buttons ( hidden due to is mobile first hide the button sm:block enable the button when viewport is ≥640px )-->
 
-      <div class="flex items-center"> <!-- Contenedor de los botones -->
-        <a href="#" class="hidden rounded-lg border border-zinc-600 px-2.5 py-1 font-bold text-white transition-colors hover:bg-zinc-800 sm:block sm:px-4 sm:py-1.5">Login</a> <!-- Botón de inicio de sesión, oculto en pantallas pequeñas y visible en pantallas medianas y grandes -->
+      <div class="flex items-center">
+        <!-- Contenedor de los botones -->
 
-        <a href="#"> <!-- Botón de usuario, visible en pantallas pequeñas y oculto en pantallas medianas y grandes -->
-          <span class="sr-only">User</span> <!-- Texto accesible para lectores de pantalla, oculto visualmente -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 stroke-gray-400 stroke-3 sm:hidden"> <!-- Icono de usuario, visible en pantallas pequeñas y oculto en pantallas medianas y grandes -->
+        <a href="#" class="hidden rounded-lg border border-zinc-600 px-2.5 py-1 font-bold text-white transition-colors hover:bg-zinc-800 sm:block sm:px-4 sm:py-1.5">Login</a>
+
+        <!-- Botón de inicio de sesión, oculto en pantallas pequeñas y visible en pantallas medianas y grandes -->
+
+        <a href="#">
+          <!-- Botón de usuario, visible en pantallas pequeñas y oculto en pantallas medianas y grandes -->
+
+          <span class="sr-only">User</span>
+
+          <!-- Texto accesible para lectores de pantalla, oculto visualmente -->
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 stroke-gray-400 stroke-3 sm:hidden">
+            <!-- Icono de usuario, visible en pantallas pequeñas y oculto en pantallas medianas y grandes -->
+
             <!-- Cabeza -->
 
             <circle cx="12" cy="7" r="4" />
@@ -58,32 +71,37 @@
     </nav>
   </header>
 
-<!-- =================================== Header ================================================ -->
+  <!-- =================================== Header ================================================ -->
 
-<!-- =================================== Contenido Principal =================================== -->
+  <!-- =================================== Contenido Principal =================================== -->
 
-  <main class="flex-grow"> <!-- Contenedor principal que ocupa el espacio restante de la pantalla -->
-    <div>
-      <!-- Agregamos w-fit para ajustar el ancho y mx-auto para centrarlo -->
+  <main class="flex-grow">
+    <!-- Contenedor principal que ocupa el espacio restante de la pantalla -->
 
-      <nav class="mx-auto flex w-fit justify-center gap-3.5 border-b border-zinc-700 px-2 py-2">
-        <a href="#" class="transition-colors hover:text-white">SVG</a>
+    <!-- ===================================== Hero ================================================ -->
 
-        <a href="#" class="transition-colors hover:text-white">Headers</a>
+    <section class="px-6 py-24 text-center">
+      <h1 class="bg-gradient-to-r from-cyan-400 to-sky-600 bg-clip-text text-4xl font-extrabold tracking-tight text-transparent sm:text-6xl">Pixel Library</h1>
 
-        <a href="#" class="transition-colors hover:text-white">Footers</a>
-      </nav>
-    </div>
+      <!-- tracking-tight hace que las letras estén ligeramente más juntas. -->
+
+      <p class="mx-auto mt-6 max-w-2xl text-lg text-zinc-400 sm:text-xl">A growing collection of components, snippets & ideas.</p>
+
+      <!-- max-w-2xl limita cuánto puede crecer el párrafo Y mx-auto lo centra.-->
+
+      <p class="mt-4 text-sm text-zinc-500">Built while learning. Built to be reused.</p>
+
+      <a href="#" class="mt-8 inline-block rounded-lg bg-cyan-500 px-5 py-2.5 font-semibold text-zinc-950 transition-colors hover:bg-cyan-400"> Explore Library → </a>
+    </section>
+
+    <!-- ===================================== Hero ================================================ -->
   </main>
 
-<!-- =================================== Contenido Principal =================================== -->
+  <!-- =================================== Contenido Principal =================================== -->
 
-<!-- =================================== Footer ================================================ -->
+  <!-- =================================== Footer ================================================ -->
 
   <footer class="bg-zinc-900 px-10 py-10 text-zinc-400">
-
-    
-
     <div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-3">
       <!-- Columna 1: Redes Sociales -->
 
@@ -174,8 +192,7 @@
       <p><small>&copy; 2026 Pixel Library. Todos los derechos reservados.</small></p>
     </div>
   </footer>
-
-<!-- =================================== Footer ================================================ -->
 </div>
+
   </body>
 </html>
