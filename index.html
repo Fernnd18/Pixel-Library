@@ -9,13 +9,13 @@
   <body>
 
 <div class="flex min-h-screen flex-col">
-  <!--div contenedor de la pagina min-h-screen ayuda a medir toda la pagina para ajustarel diseño y flex-col ajusta la estrcutura del contenedor principal-->
-
   <!-- =================================== Header ================================================ -->
 
   <header class="sticky top-0 z-50">
-    <nav class="flex items-center justify-between bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-700 px-6 py-4">
+    <nav class="flex items-center justify-between bg-zinc-900 px-6 py-4">
       <a href="#" class="flex items-center gap-1 bg-gradient-to-r from-cyan-400 to-sky-600 bg-clip-text text-xl font-extrabold text-transparent sm:text-2xl">
+        <!-- SVG and Brand name -->
+
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="20 10 60 75" class="h-10 w-10 flex-shrink-0 fill-current sm:h-12 sm:w-12">
           <!-- Triángulo superior izquierdo (Cian brillante) -->
 
@@ -39,35 +39,17 @@
         <span class=""> Pixel Library</span>
       </a>
 
-      <!-- Botones // Buttons ( hidden due to is mobile first hide the button sm:block enable the button when viewport is ≥640px )-->
+      <!-- Contenedor de los botones -->
 
-      <div class="flex items-center">
-        <!-- Contenedor de los botones -->
+      <!-- To be build 
 
-        <a href="#" class="hidden rounded-lg border border-zinc-600 px-2.5 py-1 font-bold text-white transition-colors hover:bg-zinc-800 sm:block sm:px-4 sm:py-1.5">Login</a>
 
-        <!-- Botón de inicio de sesión, oculto en pantallas pequeñas y visible en pantallas medianas y grandes -->
 
-        <a href="#">
-          <!-- Botón de usuario, visible en pantallas pequeñas y oculto en pantallas medianas y grandes -->
+      <div class="flex items-center"></div> 
 
-          <span class="sr-only">User</span>
 
-          <!-- Texto accesible para lectores de pantalla, oculto visualmente -->
 
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 stroke-gray-400 stroke-3 sm:hidden">
-            <!-- Icono de usuario, visible en pantallas pequeñas y oculto en pantallas medianas y grandes -->
-
-            <!-- Cabeza -->
-
-            <circle cx="12" cy="7" r="4" />
-
-            <!-- Hombros / Cuerpo -->
-
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-          </svg>
-        </a>
-      </div>
+      -->
     </nav>
   </header>
 
@@ -80,7 +62,7 @@
 
     <!-- ===================================== Hero ================================================ -->
 
-    <section class="px-6 py-24 text-center">
+    <section class="px-6 py-16 text-center">
       <h1 class="bg-gradient-to-r from-cyan-400 to-sky-600 bg-clip-text text-4xl font-extrabold tracking-tight text-transparent sm:text-6xl">Pixel Library</h1>
 
       <!-- tracking-tight hace que las letras estén ligeramente más juntas. -->
@@ -91,7 +73,103 @@
 
       <p class="mt-4 text-sm text-zinc-500">Built while learning. Built to be reused.</p>
 
-      <a href="#" class="mt-8 inline-block rounded-lg bg-cyan-500 px-5 py-2.5 font-semibold text-zinc-950 transition-colors hover:bg-cyan-400"> Explore Library → </a>
+      <!-- ====================== Contenido de ejemplo dentro de hero ====================== -->
+
+      <section class="px-6 py-20">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="text-3xl font-bold">Featured Components</h2>
+
+          <p class="mt-4 text-zinc-400">Acá tienes algunos ejemplos de componentes que puedes encontrar en nuestra librería.</p>
+        </div>
+
+        <div class="mx-auto mt-10 grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-3">
+          <!-- =================== Boton Ejemplo =================== -->
+
+          <article class="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
+            <!-- overflow-hidden = Si algo dentro de este elemento se sale de sus límites, escóndelo. Sin overflow-hidden, algún elemento interno podría sobresalir de las esquinas -->
+
+            <div class="flex items-center justify-center p-10">
+              <!-- Preview -->
+
+              <button class="cursor-pointer rounded-lg bg-cyan-500 px-5 py-2.5 font-semibold text-zinc-950 hover:bg-cyan-700 hover:text-white">Get Started</button>
+            </div>
+
+            <div class="border-t border-zinc-700 p-6">
+              <!-- Information -->
+
+              <h3 class="font-semibold text-white">Hover Button</h3>
+
+              <p class="mt-3 text-sm leading-relaxed text-zinc-400">Ejemplo de boton con animacion de tipo "Hover" construido con Tailwind CSS.</p>
+
+              <!-- leading-relaxed Controla el espacio vertical entre las líneas de texto -->
+            </div>
+
+            <a href="library.html" class="mt-1 mb-3 inline-block rounded-xl border border-zinc-500 px-2 py-2 font-semibold text-cyan-400 hover:bg-zinc-100 hover:text-cyan-700">View Component</a>
+          </article>
+
+          <!-- =================== Card Ejemplo =================== -->
+
+          <article class="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
+            <!-- overflow-hidden = Si algo dentro de este elemento se sale de sus límites, escóndelo. Sin overflow-hidden, algún elemento interno podría sobresalir de las esquinas -->
+
+            <div class="flex items-center justify-center p-10">
+              <div class="w-64 rounded-xl border border-zinc-700 bg-zinc-800 p-5">
+                <h3 class="font-semibold text-white">Simple Card</h3>
+
+                <p class="mt-2 text-sm text-zinc-400">Contenido de la card aqui</p>
+
+                <button class="mt-4 cursor-pointer rounded-lg border border-zinc-500 bg-amber-100 px-2 py-0.5 font-semibold hover:bg-zinc-400">Learn More</button>
+              </div>
+            </div>
+
+            <div class="border-t border-zinc-700 p-6">
+              <h3 class="font-semibold text-white">Basic Card</h3>
+
+              <p class="mt-3 text-sm leading-relaxed text-zinc-400">Ejemplo de una card sencilla construida con Tailwind CSS.</p>
+
+              <!-- leading-relaxed Controla el espacio vertical entre las líneas de texto -->
+            </div>
+          </article>
+
+          <!-- =================== Navbar Ejemplo =================== -->
+
+          <article class="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
+            <!-- overflow-hidden = Si algo dentro de este elemento se sale de sus límites, escóndelo. Sin overflow-hidden, algún elemento interno podría sobresalir de las esquinas -->
+
+            <div class="flex items-center justify-center p-10">
+              <div class="flex w-full items-center justify-between rounded-lg bg-zinc-800 px-4 py-3">
+                <span class="font-bold text-cyan-400"> Brand </span>
+
+                <div class="flex gap-4 text-sm text-zinc-300">
+                  <a href="#" class="hover:text-white"> Link 1 </a>
+
+                  <a href="#" class="hover:text-white"> Link 2 </a>
+
+                  <a href="#" class="hover:text-white"> login </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="border-t border-zinc-700 p-6">
+              <!-- Information -->
+
+              <h3 class="font-semibold text-white">Navbar</h3>
+
+              <p class="mt-3 text-sm leading-relaxed text-zinc-400">Ejemplo de una navegación sencilla construida con Tailwind CSS</p>
+
+              <!-- leading-relaxed Controla el espacio vertical entre las líneas de texto -->
+            </div>
+
+            <a href="library.html" class="mt-1 mb-3 inline-block rounded-xl border border-zinc-500 px-2 py-2 font-semibold text-cyan-400 hover:bg-zinc-100 hover:text-cyan-700">View Component</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- ====================== Contenido de ejemplo dentro de hero ====================== -->
+
+      <!-- ====================== Boton de Explore Library direcciona al Library ====================== -->
+
+      <a href="library.html" class="mt-8 inline-block rounded-lg bg-cyan-500 px-5 py-2.5 font-semibold text-zinc-950 transition-colors hover:bg-cyan-400"> Explore Library → </a>
     </section>
 
     <!-- ===================================== Hero ================================================ -->
@@ -102,85 +180,11 @@
   <!-- =================================== Footer ================================================ -->
 
   <footer class="bg-zinc-900 px-10 py-10 text-zinc-400">
-    <div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-3">
+    <div class="mx-auto max-w-xl text-center">
       <!-- Columna 1: Redes Sociales -->
 
       <div>
-        <h3 class="font-bold text-white">Redes Sociales</h3>
-
-        <nav class="mt-3 flex flex-row gap-3">
-          <!-- Facebook -->
-
-          <a href="#" class="transition-colors hover:text-blue-500">
-            <span class="sr-only">Facebook</span>
-
-            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
-            </svg>
-          </a>
-
-          <!-- Instagram -->
-
-          <a href="#" class="transition-colors hover:text-pink-500">
-            <span class="sr-only">Instagram</span>
-
-            <svg class="h-6 w-6 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-            </svg>
-          </a>
-
-          <!-- GitHub -->
-
-          <a href="#" class="transition-colors hover:text-white">
-            <span class="sr-only">GitHub</span>
-
-            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-            </svg>
-          </a>
-        </nav>
-      </div>
-
-      <!-- Columna 2: Contactos -->
-
-      <div>
-        <h3 class="font-bold text-white">Contactos</h3>
-
-        <nav class="mt-3 flex flex-row gap-4">
-          <!-- WhatsApp -->
-
-          <a href="#" class="transition-colors hover:text-green-500">
-            <span class="sr-only">WhatsApp</span>
-
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6" aria-label="WhatsApp">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.67-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-
-              <path d="M12.004 2.003a9.95 9.95 0 0 0-8.471 15.354L2 22l4.786-1.51A9.95 9.95 0 1 0 12.004 2.003zm0 18.2a8.24 8.24 0 0 1-4.2-1.15l-.3-.178-2.84.896.925-2.768-.196-.31a8.24 8.24 0 1 1 6.611 3.51z" />
-            </svg>
-          </a>
-
-          <!-- Correo -->
-
-          <a href="mailto:info@correo.com" class="transition-colors hover:text-amber-500">
-            <span class="sr-only">Correo electrónico</span>
-
-            <svg class="h-6 w-6 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-
-              <polyline points="22,6 12,13 2,6" />
-            </svg>
-          </a>
-        </nav>
-      </div>
-
-      <!-- Columna 3: Sobre la Empresa / Enlaces rápidos (Nueva para equilibrar el Grid) -->
-
-      <div>
-        <h3 class="font-bold text-white">Sobre Pixel Library</h3>
+        <h3 class="font-bold text-white">Pixel Library</h3>
 
         <p class="mt-3 text-sm leading-relaxed">Pixel Library es una pequeña biblioteca de componentes que te ayudaran a diseñar tu pagina web con facilidad.</p>
       </div>
@@ -188,11 +192,12 @@
 
     <!-- =================================== Copyright =================================== -->
 
-    <div class="mt-10 border-t border-zinc-700 pt-4 text-center text-xs">
-      <p><small>&copy; 2026 Pixel Library. Todos los derechos reservados.</small></p>
+    <div class="mt-10 border-t border-zinc-700 pt-4 text-center">
+      <p><small>&copy; 2026 Pixel Library.</small></p>
     </div>
   </footer>
 </div>
+
 
   </body>
 </html>
