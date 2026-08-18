@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./src/output.css" rel="stylesheet">
     <title>Pixel Library</title>
   </head>
   <body>
 
 <div class="flex min-h-screen flex-col">
+  <!--!npx @tailwindcss/cli -i ./src/input.css -o ./output.css --watch-->
   <!-- =================================== Header ================================================ -->
 
   <header class="sticky top-0 z-50">
@@ -104,7 +105,7 @@
               <!-- leading-relaxed Controla el espacio vertical entre las líneas de texto -->
             </div>
 
-            <a href="library.html" class="mt-1 mb-3 inline-block rounded-xl border border-zinc-500 px-2 py-2 font-semibold text-cyan-400 hover:bg-zinc-100 hover:text-cyan-700">View Component</a>
+            <a href="./pages/library.html" class="mt-1 mb-3 inline-block rounded-xl border border-zinc-500 px-2 py-2 font-semibold text-cyan-400 hover:bg-zinc-100 hover:text-cyan-700">View Component</a>
           </article>
 
           <!-- =================== Card Ejemplo =================== -->
@@ -160,7 +161,7 @@
               <!-- leading-relaxed Controla el espacio vertical entre las líneas de texto -->
             </div>
 
-            <a href="library.html" class="mt-1 mb-3 inline-block rounded-xl border border-zinc-500 px-2 py-2 font-semibold text-cyan-400 hover:bg-zinc-100 hover:text-cyan-700">View Component</a>
+            <a href="./pages/library.html" class="mt-1 mb-3 inline-block rounded-xl border border-zinc-500 px-2 py-2 font-semibold text-cyan-400 hover:bg-zinc-100 hover:text-cyan-700">View Component</a>
           </article>
         </div>
       </section>
@@ -169,7 +170,7 @@
 
       <!-- ====================== Boton de Explore Library direcciona al Library ====================== -->
 
-      <a href="library.html" class="mt-8 inline-block rounded-lg bg-cyan-500 px-5 py-2.5 font-semibold text-zinc-950 transition-colors hover:bg-cyan-400"> Explore Library → </a>
+      <a href="./pages/library.html" class="mt-8 inline-block rounded-lg bg-cyan-500 px-5 py-2.5 font-semibold text-zinc-950 transition-colors hover:bg-cyan-400"> Explore Library → </a>
     </section>
 
     <!-- ===================================== Hero ================================================ -->
